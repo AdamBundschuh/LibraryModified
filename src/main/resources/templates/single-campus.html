@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCCI Libraries</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href=".css/layout.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>We Can Code It Libraries</h1>
+    </header>
+    <main>
+
+        <h2 th:text="${campus.getName()}"></h2>
+        <ul th:each="book:${campus.getBooks()}">
+            <li><a th:href="'/books/' + ${book.id}" th:text="${book.getTitle()}">Link</a></li>
+        </ul>
+
+    </main>
+    <footer><small>WCCI 2021</small></footer>
+</div>
+</body>
+</html>

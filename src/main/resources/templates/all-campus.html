@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCCI Libraries</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href=".css/layout.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>We Can Code It Libraries</h1>
+        </header>
+        <main>
+            <h2>WCCI Campuses:</h2>
+            <ul th:each="campus:${campuses}">
+<!--                <li><a href="../static/cleveland.html">Cleveland</a></li>-->
+<!--                <li><a href="../static/columbus.html">Columbus</a></li>-->
+                <li th:text="${campus.name}">Test</li>
+            </ul>
+        </main>
+        <footer><small>WCCI 2021</small></footer>
+    </div>
+</body>
+</html>
